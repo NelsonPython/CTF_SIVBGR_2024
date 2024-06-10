@@ -59,7 +59,7 @@ AwAABAAAAABQSwUGAAAAAAEAAQBSAAAAmgAAAAAA
 --000000000000cd98100617e8acef--
 ```
 
-### Step 2:  The password is in hex format.  
+### Step 2:  The password is in hex format
 I decoded it using https://cryptii.com/pipes/hex-decoder
 ```
 Encoded:
