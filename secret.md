@@ -1,5 +1,8 @@
 ## Challenge:  Secret [Forensics] 150 Points
 We managed to get an informant to obtain a document, Secret.pdf, which we believe might contain information confirming alien existence, but it is too censored.
+
+[Secret.pdf](Secret.pdf)
+
 ## Solution
 I used pdfminer to extract the flag:
 ```
