@@ -144,6 +144,56 @@ public_key.pem
 Here is your decrypted flag: SIVBGR{D0nt_F0rg37_T0_P4D!!!}
 ```
 
+### Cube root
+After the event, Jacob Elliott offered a coupon for his Udemy course, CTF 101: Competitive Learning in Cybersecurity.  I signed up and found this solution in his Cryptography module along with an explanation of the math.
+
+```
+from Crypto.Util.number import long_to_bytes, getPrime, bytes_to_long
+
+def cube_root(n):
+    low = 0
+    mid = n//2
+    high = n
+
+    while low < mid < high:
+        if mid **3>n:
+            high = mid -1
+        elif mid ** 3 < n:
+            low = mid + 1
+        mid = low + ((high-low)//2)
+    return mid
+
+
+print("Expecting out.txt to contain")
+print("Here is your encrypted flag: 1132...")
+print("Here is your public key:")
+print("n: 546...")
+print("e: 3\n")
+
+filename = 'out.txt'
+with open(filename, 'r') as f:
+    data = f.read()
+
+# given the format of out.txt shown above
+lines = data.split(": ")
+f = lines[1].split("\n")
+Flag = int(f[0])
+nn = lines[2].split("\n")
+n = int(nn[0])
+e = 3
+
+print(long_to_bytes(cube_root(Flag)))
+```
+```
+$ python3 cube_root.py                             
+Expecting out.txt to contain
+Here is your encrypted flag: 1132...
+Here is your public key:
+n: 546...
+e: 3
+
+b'SIVBGR{D0nt_F0rg37_T0_P4D!!!}'
+```
 
 ## Notes from Copilot
 ### Me:  
