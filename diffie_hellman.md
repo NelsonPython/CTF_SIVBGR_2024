@@ -61,6 +61,7 @@ add a function to compute the shared secret
 ### Copilot
 Certainly! To compute the shared secret in the Diffie-Hellman key exchange, you can use the public key from the other party and your own private key. Here’s a Python function that calculates the shared secret:
 
+I copied this code to a script named, diffie_helman.py
 ```
 def compute_shared_secret(other_public_key, p, private_key):
     return pow(other_public_key, private_key, p)
@@ -82,6 +83,12 @@ shared_secret_b = compute_shared_secret(public_key_a, p, b)
 # The shared secrets should be equal
 print(f"Shared Secret for Party A: {shared_secret_a}")
 print(f"Shared Secret for Party B: {shared_secret_b}")
+```
+```
+python3 diffie_helman.py       
+Shared Secret for Party A: 47
+Shared Secret for Party B: 47
+
 ```
 AI-generated code. Review and use carefully.
 This function uses the pow function to compute ( other_public_key^{private_key} \mod p ), which is the shared secret. In the example usage, after computing the public keys for both parties, each party uses the other’s public key to compute the shared secret. If everything is done correctly, shared_secret_a and shared_secret_b should be equal, providing a common secret key that can be used for further encryption.
