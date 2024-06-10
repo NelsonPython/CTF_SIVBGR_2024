@@ -35,7 +35,7 @@ To find the original input, we need to reverse these operations:
 
 Let’s write the reverse code:
 
-Python
+Python script 1:
 ```
 phoneSteak = [55, 33, 52, 40, 35, 56, 86, 90, 66, 111, 81, 26, 23, 75, 109, 26, 88, 90, 75, 67, 92, 25, 87, 88, 92, 84, 23, 88]
 
@@ -64,7 +64,7 @@ originalInput = [chr((num ^ 15) + 27) for num in phoneSteak]
 originalFlag = ''.join(originalInput)
 print(f"The original flag is: {originalFlag}")
 ```
-
+Python script 2:
 ```
 phoneSteak = [55, 33, 52, 40, 35, 56, 86, 90, 66, 111, 81, 26, 23, 75, 109, 26, 88, 90, 75, 67, 92, 25, 87, 88, 92, 84, 23, 88]
 
