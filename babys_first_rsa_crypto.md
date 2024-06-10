@@ -66,7 +66,7 @@ e: 3
 ```
 
 ## Solution
-### Step 1: View main.py
+### Step 1: Review main.py
 main.py includes an import statement: 
 ```
 from secret import FLAG
