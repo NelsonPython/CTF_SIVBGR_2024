@@ -7,7 +7,7 @@ The instructions contain 2 important clues.  First, "We received a GIFt".  I sea
 
 https://github.com/dtmsecurity/gift?ref=dtm.uk
 
-I downloaded the scripts and realized that I needed a filename.  The second clue gives the filename:  All we know is that it's in the form of a text file named 'iwanttobelieve.txt'
+I downloaded the scripts and read the instructions.  The second clue gives the filename:  All we know is that it's in the form of a text file named 'iwanttobelieve.txt'
 
 I ran this command:
 ```
