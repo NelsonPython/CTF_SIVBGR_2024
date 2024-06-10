@@ -6,10 +6,13 @@ https://uscybercombine-s4-hunt.chals.io/
 
 ## Solution:
 
-Part of the flag can be found by viewing the source of the main page:
+Part of the flag and a clue can be found by viewing the source of the main page:
 
-SIVBGR{r1s3_
+```
+  <!-- Don't forget to check in on the bots! -->
+    <!-- p1: SIVBGR{r1s3_ -->
+```
 
-In addition to the three images of robots, I found another robot.jpeg in /static/img/robot.jpeg
+In addition to the three images of robots on the main webpage, I found another, robot.jpeg, in /static/img/robot.jpeg
 
 None of my steganography tools work so still seeking the flag
