@@ -1,6 +1,6 @@
 ## Challenge: Baby's First RSA [Crypto] 150 Points
 
-I learned just learned about RSA and I am pretty sure that I implemented it right. It should be impossible to get my flag.
+I just learned about RSA and I am pretty sure that I implemented it right. It should be impossible to get my flag.
 
 Two files were provided:  main.py and challenge
 
