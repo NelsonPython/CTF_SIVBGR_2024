@@ -65,6 +65,26 @@ originalFlag = ''.join(originalInput)
 print(f"The original flag is: {originalFlag}")
 ```
 
-I found the flag by running the code written by Copilot: 
+```
+phoneSteak = [55, 33, 52, 40, 35, 56, 86, 90, 66, 111, 81, 26, 23, 75, 109, 26, 88, 90, 75, 67, 92, 25, 87, 88, 92, 84, 23, 88]
+
+# reverse the reversing of the second half
+half = len(phoneSteak) // 2
+phoneSteak = phoneSteak[:half] + phoneSteak[:half -1:-1]
+
+# reverse the swapping of elements
+swap_indices = [(6, (1240 + 28 // 28) % 28), (10, (248 // 28) % 28), (17,(341 //28) % 17)]
+for index1, index2 in swap_indices:
+    phoneSteak[index1], phoneSteak[index2] = phoneSteak[index2], phoneSteak[index1]
+
+# Reverse the XOR operation and the subtraction
+original_values = [((value ^ 15) + 27) for value in phoneSteak]
+
+# Convert ASCII values back to characters
+flag = ''.join(chr(value) for value in original_values)
+print(f"The flag is : {flag}")
+```
+
+Both scripts will find the flag: 
 SIVBGR{pyth0n_r3v3rs1ng_pr0}
 
