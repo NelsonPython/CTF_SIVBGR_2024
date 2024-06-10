@@ -35,7 +35,7 @@ To find the original input, we need to reverse these operations:
 
 Let’s write the reverse code:
 
-Python script 1:
+copilot.py:
 ```
 phoneSteak = [55, 33, 52, 40, 35, 56, 86, 90, 66, 111, 81, 26, 23, 75, 109, 26, 88, 90, 75, 67, 92, 25, 87, 88, 92, 84, 23, 88]
 
@@ -64,7 +64,7 @@ originalInput = [chr((num ^ 15) + 27) for num in phoneSteak]
 originalFlag = ''.join(originalInput)
 print(f"The original flag is: {originalFlag}")
 ```
-Python script 2:
+copilot_2.py:
 ```
 phoneSteak = [55, 33, 52, 40, 35, 56, 86, 90, 66, 111, 81, 26, 23, 75, 109, 26, 88, 90, 75, 67, 92, 25, 87, 88, 92, 84, 23, 88]
 
@@ -85,6 +85,10 @@ flag = ''.join(chr(value) for value in original_values)
 print(f"The flag is : {flag}")
 ```
 
-Both scripts will find the flag: 
-SIVBGR{pyth0n_r3v3rs1ng_pr0}
-
+```
+└─$ python3 copilot_2.py 
+The original flag is : SIVBGR{pyth0n_r3v3rs1ng_pr0}
+                                                                                              
+└─$ python3 copilot.py  
+The flag is : SIVBGR{pyth0n_r3v3rs1ng_pr0}
+```
