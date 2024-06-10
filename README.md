@@ -1,5 +1,7 @@
 # Writeups for the [2024 US Cyber Open](https://www.uscybergames.com/)
 
+I test AI so I contacted the leaders of the US Cyber Open and asked if using Microsoft Copilot would be cheating.  I was told that I could use any tool including Copilot.  Some of these writeups include my conversations with Copilot.  
+
 [Secret - Forensics](01_secret.md)
 
 [I want to believe - Forensics](02_iwanttobelieve.md)
@@ -17,4 +19,6 @@
 [Container Chronicles]()
 
 [Flag Hunt - Web]()
+
+<small>Note:  In some cases, Copilot did provide references with links.  Unfortunately, while working to complete challenges, I inadvertently failed to copy some reference URLs.</small>
 
