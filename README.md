@@ -14,7 +14,7 @@ I test AI so I contacted the leaders of the US Cyber Open and asked if using Mic
 
 [Baby's First Crypto - Cryptography](baby_first_crypto.md)
 
-[Diffie Hellman - Crptography](diffie-hellman.md)
+[Diffie Hellman - Cryptography](diffie-hellman.md)
 
 [Container Chronicles]()
 
