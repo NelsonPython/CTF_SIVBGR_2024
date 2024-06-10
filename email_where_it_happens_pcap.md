@@ -45,3 +45,5 @@ FIQSUIJKEEVCCKRBFIQSUIJKEEVAUSKOKRCVEQ2FKBKEKRBAIVGEKQ2UKJHU4SKDEBGUCSKMEBBU6TKN
 decoded:
 b'*!*!*!*!*!*!*!*!*\nINTERCEPTED ELECTRONIC MAIL COMMUNICATION\n*!*!*!*!*!*!*!*!*\nTO: brian.riggs@area51.cloud\nFROM: illuminati@secrets.us\nDATE: 5/14/2024@16:33\nSUBJ: RE: CONFIRMED EXTRATERRESTRIAL LIFE\nBODY:\nHello Brian,\n\nWe appreciate the information you have provided us regarding your discovery and prompt detention of extraterrestrial life on Earth. This is fantastic news and puts us in position for us to begin phase two of our plan for world domination. We understand you have stored the lifeform in the agreed upon location and set the lock to utilize the password to "SIVBGR{wh0_n33ds_32_b4s3s}". We will follow up after investigating the provided lifeform with further instructions.\n\nSalutations,\nTriangle Bois\n*!*!*!*!*!*!*!*!*\nEND TRANSMISSION\n*!*!*!*!*!*!*!*!*'
 ```
+Scroll to the right to find the flag:
+SIVBGR{wh0_n33ds_32_b4s3s}
