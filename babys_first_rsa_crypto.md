@@ -145,7 +145,7 @@ SIVBGR{D0nt_F0rg37_T0_P4D!!!}
 ```
 
 ### Cube root
-Copilot provided an explanation of the math along with examples.  After the event, Jacob Elliott offered a coupon for his Udemy course, CTF 101: Competitive Learning in Cybersecurity.  Rather than validate the Copilot explanation, I thought I would learn faster by signing up for this class.  I found a more elegant solution in the Cryptography module along with an explanation of the math that was easy to understand.
+Copilot explained the code and the math but copilot also hallucinates.  I always have to validate what it says by studying the references it provides or other material.  After the event, Jacob Elliott offered a coupon for his Udemy course, CTF 101: Competitive Learning in Cybersecurity.  I thought I would learn faster by signing up for his class.  I was right.  He posted links to YouTube videos that explained the math so it was easier to understand and he provided a more elegant solution in his Cryptography module.  He called it the "cube root" and here's the code I used to get the flag.
 
 ```
 from Crypto.Util.number import long_to_bytes, getPrime, bytes_to_long
