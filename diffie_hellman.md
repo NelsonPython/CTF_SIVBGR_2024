@@ -16,7 +16,7 @@ What is their shared secret?
 Enter your input: 47
 ```
 
-How did I compute 47?  I did some research with Copilot:
+How did I compute 47?
 
 ### Me
 tell me which encoder will translate g=12, p=53, a=8, b=67
