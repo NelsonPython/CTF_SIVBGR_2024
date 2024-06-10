@@ -46,6 +46,17 @@ def main():
 if __name__ == '__main__': main()
 ```
 
+I had a conversation with Copilot.
+### Me:  
+explain the pow statement in python
+### Copilot
+In Python, the pow function is often used in RSA key generation to perform modular exponentiation. The pow function can take two or three arguments: 
+pow(x, y) computes 𝑥𝑦 = xy
+pow(x, y, z) computes (x) raised to the power (y), modulo (z)
+
+In the context of RSA key generation, this function is crucial for calculating the public and private keys. The RSA algorithm relies on the difficulty of factoring large prime numbers, and the pow function is used to raise a number to a power within the modulus of these large primes, which is a part of the encryption and decryption process.
+
+
 ```
 $ cat out.txt
 Here is your encrypted flag: 11320887921865707970417131707489304941213737344372772560296232001708703523599042195968223212365109776754039820465372975539526543057079098227551678593290445701559045011482149948708333749562432591623529530280037
@@ -60,13 +71,13 @@ main.py includes an import statement:
 ```
 from secret import FLAG
 ```
-I used a text editor to creat a dummy FLAG and stored it in secret.py
+I used a text editor to create a dummy FLAG and stored it in secret.py
 ```
 └─$ cat secret.py  
 FLAG = b'dummyFLAG'
 ```
 ### Step 2: Write a Python script
-I did some research and chose to install the [cryptography](https://pypi.org/project/cryptography/) module.  Then, I copied main.py to a new script called, rsa_calcs.py.  I had previously received permission to use AI so I had a chat with Copilot.  Here's the script written by Copilot with a few modifications:
+I did some research and chose to install the [cryptography](https://pypi.org/project/cryptography/) module.  Then, I copied main.py to a new script called, rsa_calcs.py.  I had previously received permission to use AI so I had a chat with Copilot and came up with this script:
 ```
 import rsa
 from Crypto.Util.number import long_to_bytes, getPrime, bytes_to_long
@@ -194,14 +205,3 @@ e: 3
 
 b'SIVBGR{D0nt_F0rg37_T0_P4D!!!}'
 ```
-
-## Notes from Copilot
-### Me:  
-explain the pow statement in python
-### Copilot
-In Python, the pow function is often used in RSA key generation to perform modular exponentiation. The pow function can take two or three arguments: 
-pow(x, y) computes 𝑥𝑦 = xy
-pow(x, y, z) computes (x) raised to the power (y), modulo (z)
-
-In the context of RSA key generation, this function is crucial for calculating the public and private keys. The RSA algorithm relies on the difficulty of factoring large prime numbers, and the pow function is used to raise a number to a power within the modulus of these large primes, which is a part of the encryption and decryption process.
-
