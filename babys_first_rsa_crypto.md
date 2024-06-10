@@ -82,6 +82,18 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+Here's the output from rsa_decoder.py
+```
+$ python3 rsa_decoder.py                           
+
+Encrypted flag: 11320887921865707970417131707489304941213737344372772560296232001708703523599042195968223212365109776754039820465372975539526543057079098227551678593290445701559045011482149948708333749562432591623529530280037
+
+private_key.pem
+public_key.pem
+
+Here is your decrypted flag: SIVBGR{D0nt_F0rg37_T0_P4D!!!}
+```
+
 
 ## Notes from Copilot
 ### Me:  
