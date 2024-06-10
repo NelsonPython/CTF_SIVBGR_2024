@@ -16,9 +16,9 @@ I test AI so I contacted the leaders of the US Cyber Open and asked if using Mic
 
 [Diffie Hellman - Cryptography](diffie_hellman.md)
 
-[Container Chronicles]()
+[Container Chronicles](partial_container_chronicles.md)
 
-[Flag Hunt - Web]()
+[Flag Hunt - Web](partial_hunt.md)
 
 <small>Note:  In some cases, Copilot did provide references with links.  Unfortunately, while working to complete challenges, I inadvertently failed to copy some reference URLs.</small>
 
