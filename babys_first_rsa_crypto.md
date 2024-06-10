@@ -10,13 +10,13 @@ main.py includes an import statement:
 ```
 from secret import FLAG
 ```
-I used a text editor to creat a dummy FLAG in secret.py
+I used a text editor to creat a dummy FLAG and stored it in secret.py
 ```
 └─$ cat secret.py  
 FLAG = b'dummyFLAG'
 ```
 ### Step 2: Write a Python script
-I did some research and chose to install [cryptography](https://pypi.org/project/cryptography/).  Then, I copied main.py to a new script called, rsa_calcs.py.  I had previously received permission to use AI so I had a chat with Copilot.  Here's the script from Copilot:
+I did some research and chose to install the [cryptography](https://pypi.org/project/cryptography/) module.  Then, I copied main.py to a new script called, rsa_calcs.py.  I had previously received permission to use AI so I had a chat with Copilot.  Here's the script written by Copilot with a few modifications:
 ```
 import rsa
 from Crypto.Util.number import long_to_bytes, getPrime, bytes_to_long
@@ -52,9 +52,12 @@ def main():
     enc_flag = pow(bytes_to_long(FLAG), e, n)
     print(type(enc_flag))
 
-    # Since the script has both private and public key, it can decrypt
-    # the flag, if I substitute the flag ciphertext
+    #####################################################################
+    # I added this:
+    # Since the script has both a private and public key, it can decrypt
+    # a flag by substituting the ciphertext of the flag
     enc_flag = 11320887921865707970417131707489304941213737344372772560296232001708703523599042195968223212365109776754039820465372975539526543057079098227551678593290445701559045011482149948708333749562432591623529530280037
+    #####################################################################
 
     print("Encrypted flag: " + str(enc_flag))
     print("")
@@ -80,7 +83,7 @@ if __name__ == '__main__':
     main()
 ```
 
-## Notes
+## Notes from Copilot
 ### Me:  
 explain the pow statement in python
 ### Copilot
