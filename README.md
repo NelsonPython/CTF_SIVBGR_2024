@@ -12,7 +12,7 @@ I test AI so I contacted the leaders of the US Cyber Open and asked if using Mic
 
 [Email where it happens](email_where_it_happens.md)
 
-[Baby's First Crypto - Cryptography](babys_first_crypto.md)
+[Baby's First Crypto - Cryptography](babys_first_rsa_crypto.md)
 
 [Diffie Hellman - Cryptography](diffie_hellman.md)
 
