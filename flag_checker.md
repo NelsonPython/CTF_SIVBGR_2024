@@ -64,10 +64,7 @@ originalInput = [chr((num ^ 15) + 27) for num in phoneSteak]
 originalFlag = ''.join(originalInput)
 print(f"The original flag is: {originalFlag}")
 ```
-```
-└─$ python3 copilot_2.py 
-The original flag is : SIVBGR{pyth0n_r3v3rs1ng_pr0}
-                                                                                              
+```                                                                                             
 └─$ python3 copilot.py  
 The flag is : SIVBGR{pyth0n_r3v3rs1ng_pr0}
 ```
