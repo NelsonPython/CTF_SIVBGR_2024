@@ -1,4 +1,4 @@
-## Challenge:  Hunt
+## Challenge:  Hunt [Web] 150 Points
 
 Agent, it looks like ARIA has spun up a simple website.  Is there anything you can find to give more information about it's plans?
 
