@@ -171,7 +171,7 @@ AI-generated code. Review and use carefully. More info on FAQ.
 This will give you the decrypted message in human-readable form if the original encrypted message was ASCII text.
 To perform a bitwise XOR operation between each byte of the encrypted message and the shared secret key (47), we'll first convert the hexadecimal values of the encrypted message to decimal, then XOR each with the decimal value of 47 (which is 2F in hexadecimal), and finally convert the results back to hexadecimal.
 
-Here's the Python code to perform this operation:
+Here's the Python code to perform this operation.  I copied this to xor_it.py
 
 ```python
 # Encrypted message in hexadecimal
@@ -186,6 +186,10 @@ decrypted_message_hex = [hex(int(byte, 16) ^ shared_secret_key)[2:].zfill(2) for
 # Join the decrypted bytes into a string
 decrypted_message_hex_str = ' '.join(decrypted_message_hex)
 print(f"Decrypted Message (Hex): {decrypted_message_hex_str}")
+```
+```
+Decrypted Message (Hex): 53 49 56 42 47 52 7b 34 5f 66 6c 34 67 5f 66 72 30 6d 5f 34 6c 31 63 33 5f 34 6e 64 5f 62 30 62 7d
+Decrypted Message (ASCII): SIVBGR{4_fl4g_fr0m_4l1c3_4nd_b0b}
 ```
 
 This code will output the decrypted message in hexadecimal format. If you want to convert it to a string (assuming it's ASCII text), you can modify the code to decode the hexadecimal values:
