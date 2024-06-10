@@ -140,11 +140,12 @@ Encrypted flag: 1132088792186570797041713170748930494121373734437277256029623200
 private_key.pem
 public_key.pem
 
-Here is your decrypted flag: SIVBGR{D0nt_F0rg37_T0_P4D!!!}
+Here is your decrypted flag:
+SIVBGR{D0nt_F0rg37_T0_P4D!!!}
 ```
 
 ### Cube root
-After the event, Jacob Elliott offered a coupon for his Udemy course, CTF 101: Competitive Learning in Cybersecurity.  I signed up and found this solution in his Cryptography module along with an explanation of the math.
+Copilot provided an explanation of the math along with examples.  After the event, Jacob Elliott offered a coupon for his Udemy course, CTF 101: Competitive Learning in Cybersecurity.  Rather than validate the Copilot explanation, I thought I would learn faster by signing up for this class.  I found a more elegant solution in the Cryptography module along with an explanation of the math that was easy to understand.
 
 ```
 from Crypto.Util.number import long_to_bytes, getPrime, bytes_to_long
