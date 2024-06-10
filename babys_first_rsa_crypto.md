@@ -2,7 +2,57 @@
 
 I just learned about RSA and I am pretty sure that I implemented it right. It should be impossible to get my flag.
 
-Two files were provided:  main.py and challenge
+Two files were provided:  main.py and out.txt
+
+```
+└─$ cat main.py         
+from Crypto.Util.number import bytes_to_long, getPrime
+from secret import FLAG
+
+def genRSA():
+
+  # public exponent set to 3, a common choice for RSA.  Other choice is 65535 <- check this number
+  e = 3
+  while True:
+    # generate p and q until phi is not divisible by e
+    p = getPrime(512)
+    q = getPrime(512)
+
+    # Euler totient function
+    phi = (p-1)*(q-1)
+    if phi % e:
+      break
+
+  # RSA modulus
+  n = p*q
+
+  # private exponent
+  d = pow(e,-1,phi)
+
+  return (e,n,d)
+  
+def main():
+  e,n,d = genRSA()
+
+  # encrypted flag obtained by raising the long integer of FLAG to
+  # the power of e modulo n
+  enc_flag = pow(bytes_to_long(FLAG),e,n)
+
+  print("Here is your encrypted flag: " + str(enc_flag))
+  print("Here is your public key:")
+  print("n: " + str(n))
+  print("e: " + str(e))
+
+if __name__ == '__main__': main()
+```
+
+```
+$ cat out.txt
+Here is your encrypted flag: 11320887921865707970417131707489304941213737344372772560296232001708703523599042195968223212365109776754039820465372975539526543057079098227551678593290445701559045011482149948708333749562432591623529530280037
+Here is your public key:
+n: 54635592099855565238567429816156089377033822002759547411082764468188951140701492941799814994802894116863539008046955775901349438057474600774506026999322449088884781059206427090047834145264757894872328436141156254487939678497662258017309980269148722038770041654103035346970408674206071958598445348607191506511
+e: 3
+```
 
 ## Solution
 ### Step 1: View main.py
