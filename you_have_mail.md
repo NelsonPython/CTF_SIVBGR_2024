@@ -69,30 +69,30 @@ Decoded:
 Secure_Code:Order_66
 ```
 ### Step 3:  The message is in Base64
-If you find any newlines (\n), remove them to get one long variable:
+Initially, I found newlines (\n) in the file when I copied it so I removed them to get one long variable:
 ```
 UEsDBAoACQAAADewp1gfngtKRAAAADgAAAAMABwAZXZpZGVuY2UudHh0VVQJAAMZ6zpm6Oo6ZnV4CwABBOgDAAAEAAAAADeIlKHufvfLJvJ/Ed32cRwF755eiG+bw1NAIL3UPKn+4WIMkSPXJInVFxLMCrGuacbTdG6AcqrqzDiXWVhqKv6WuHlKUEsHCB+eC0pEAAAAOAAAAFBLAQIeAwoACQAAADewp1gfngtKRAAAADgAAAAMABgAAAAAAAEAAACkgQAAAABldmlkZW5jZS50eHRVVAUAAxnrOmZ1eAsAAQToAwAABAAAAABQSwUGAAAAAAEAAQBSAAAAmgAAAAAA
 ```
-Notice this variable has upper and lower case characters so it may be base64.  Decode and save the decoded values in a file called evidence:
+I noted that only upper and lower case characters so I used base64 to decode it and save the decoded values in a file called evidence.
 ```
 echo UEsDBAoACQAAADewp1gfngtKRAAAADgAAAAMABwAZXZpZGVuY2UudHh0VVQJAAMZ6zpm6Oo6ZnV4CwABBOgDAAAEAAAAADeIlKHufvfLJvJ/Ed32cRwF755eiG+bw1NAIL3UPKn+4WIMkSPXJInVFxLMCrGuacbTdG6AcqrqzDiXWVhqKv6WuHlKUEsHCB+eC0pEAAAAOAAAAFBLAQIeAwoACQAAADewp1gfngtKRAAAADgAAAAMABgAAAAAAAEAAACkgQAAAABldmlkZW5jZS50eHRVVAUAAxnrOmZ1eAsAAQToAwAABAAAAABQSwUGAAAAAAEAAQBSAAAAmgAAAAAA
 | Base64 -d > evidence
 ```
 
 ### Step 3: Determine the file type of evidence:
-Use the file command to determine the file type:
+I used the file command to determine the file type:
 ```
 └─$ file evidence      
 evidence: Zip archive data, at least v1.0 to extract, compression method=store
 ```
 
 ### Step 4: Rename to evidence.zip and unzip it:
-Use the password that you decoded:  Secure_Code:Order_66
+I used the password from the email:  Secure_Code:Order_66
 ```
 └─$ unzip evidence.zip
 ```
 ### Step 5: Cat to view the contents:
-Unzipping resulted in one file called evidence.txt.  Use cat to view it:
+Unzipping resulted in one file called evidence.txt.  I used cat to view it and found the flag.
 ```
 └─$ cat evidence.txt
 You found the evidence! 
