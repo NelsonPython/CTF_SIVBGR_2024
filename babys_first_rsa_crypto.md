@@ -77,7 +77,7 @@ I used a text editor to create a dummy FLAG and stored it in secret.py
 FLAG = b'dummyFLAG'
 ```
 ### Step 2: Write a Python script
-I did some research and chose to install the [cryptography](https://pypi.org/project/cryptography/) module.  Then, I copied main.py to a new script called, rsa_calcs.py.  I had previously received permission to use AI so I had a chat with Copilot and came up with this script:
+I did some research and chose to install the [cryptography](https://pypi.org/project/cryptography/) module.  Then, I copied main.py to a new script called, rsa_calcs.py.  I had a chat with Copilot and came up with this script:
 ```
 import rsa
 from Crypto.Util.number import long_to_bytes, getPrime, bytes_to_long
