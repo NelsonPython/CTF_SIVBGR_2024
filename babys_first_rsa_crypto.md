@@ -56,6 +56,53 @@ pow(x, y, z) computes (x) raised to the power (y), modulo (z)
 
 In the context of RSA key generation, this function is crucial for calculating the public and private keys. The RSA algorithm relies on the difficulty of factoring large prime numbers, and the pow function is used to raise a number to a power within the modulus of these large primes, which is a part of the encryption and decryption process.
 
+Here’s a simplified example of how pow might be used in RSA key generation:
+
+Python
+```
+# RSA Modulus (n) is the product of two large primes p and q
+n = p * q
+
+# Public exponent (e) is chosen such that 1 < e < phi(n) and gcd(e, phi(n)) = 1
+e = 65537  # Common choice for e
+
+# Private exponent (d) is the modular multiplicative inverse of e modulo phi(n)
+d = pow(e, -1, phi(n))
+
+# Encryption of a message m would be c = pow(m, e, n)
+# Decryption of a ciphertext c would be m = pow(c, d, n)
+```
+In this code, phi(n) represents Euler’s totient function, which is equal to ((p-1)(q-1)) when (p) and (q) are prime. The pow function with three arguments is used to find the modular multiplicative inverse of (e) modulo phi(n), which is the private exponent (d).
+
+The pow function is efficient for these operations, even with very large numbers, because it uses an optimized algorithm for modular exponentiation, which is much faster than naive methods.
+
+Remember, this is a high-level explanation, and actual RSA implementations involve more steps and considerations for security, such as padding schemes and secure random number generation. Always use well-tested cryptographic libraries for real-world applications to ensure security.
+
+===>You
+write a simple python example of using genRSA to generate private key, public key
+
+===>Copilot
+Certainly! Below is a simple Python example that uses the pyOpenSSL library to generate an RSA private and public key pair. This example assumes you have pyOpenSSL installed. If not, you can install it using pip install pyOpenSSL.
+
+```
+from OpenSSL import crypto
+
+# Generate a new RSA key pair
+key_pair = crypto.PKey()
+key_pair.generate_key(crypto.TYPE_RSA, 2048)  # 2048 is the bit length of the key
+
+# Extract the private key in PEM format
+private_key = crypto.dump_privatekey(crypto.FILETYPE_PEM, key_pair)
+with open('private_key.pem', 'wb') as private_file:
+    private_file.write(private_key)
+
+# Extract the public key in PEM format
+public_key = crypto.dump_publickey(crypto.FILETYPE_PEM, key_pair)
+with open('public_key.pem', 'wb') as public_file:
+    public_file.write(public_key)
+
+print("RSA Key Pair generated successfully!")
+```
 
 ```
 $ cat out.txt
