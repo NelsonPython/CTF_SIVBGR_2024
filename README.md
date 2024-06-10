@@ -4,7 +4,7 @@ I test AI so I contacted the leaders of the US Cyber Open and asked if using Mic
 
 [Secret - Forensics](secret.md)
 
-[I want to believe - Forensics](iwanttobelieve.md)
+[I want to believe - Forensics](i_want_to_believe.md)
 
 [Flag checker - Reverse Engineering](flag_checker.md)
 
