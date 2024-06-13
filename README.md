@@ -2,6 +2,8 @@
 
 I test AI so I contacted the leaders of the US Cyber Open and asked if using Microsoft Copilot would be cheating.  I was told that I could use any tool including Copilot.  Some of these writeups include my conversations with Copilot.  
 
+## Beginner
+
 [Secret - Forensics](secret.md)
 
 [I want to believe - Forensics](i_want_to_believe.md)
@@ -20,5 +22,15 @@ I test AI so I contacted the leaders of the US Cyber Open and asked if using Mic
 
 [Flag Hunt - Web](partial_hunt.md)
 
-<small>Note:  In some cases, Copilot did provide references with links.  Unfortunately, while working to complete challenges, I inadvertently failed to copy some reference URLs.</small>
+## Competitive
+
+### Redundant
+After running exiftool to check the file, I opened it in [Photopea](https://www.photopea.com/) and found the flag.  SIVUSCG{1nv41d_chunk5_101}
+
+![Flag shown in image](redundant_solved.png)
+
+
+
+
+Note:  In some cases, Copilot did provide references with links.  Unfortunately, while working to complete challenges, I inadvertently failed to copy some reference URLs.
 
