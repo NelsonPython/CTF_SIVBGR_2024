@@ -31,6 +31,6 @@ After running exiftool to check the file, I opened it in [Photopea](https://www.
 
 
 
-
-Note:  In some cases, Copilot did provide references with links.  Unfortunately, while working to complete challenges, I inadvertently failed to copy some reference URLs.
+---
+Note:  In some cases, Copilot provided references with links.  Unfortunately, I inadvertently failed to save some of these reference URLs.
 
