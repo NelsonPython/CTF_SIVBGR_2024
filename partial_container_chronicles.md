@@ -49,7 +49,7 @@ http://intermodalnetwork.blogspot.com/2011/12/nyk-line-container-nyku-257454-2-h
 
 I googled "40' high-cube Seacube" and entered "DRYU9290583" to find the manufacture date.
 
-![Shows manufacture date](containChronicles.png)
+![Shows manufacture date](containerChronicles.png)
 
 ### SIVBGR{02_10_2011_d0ck3r}
 
