@@ -27,5 +27,10 @@ I used aperisolve.com to find part of the flag that was hidden in the RGB red ch
 SIVBGR{MM_DD_YYYY_d0ck3r}
 MANUFACTUREDATE
 
-Still looking for the date.
+I found a writeup on github by pbchocolate on github:
+[pbchocolate writeup for Container Chronicles](https://github.com/sa1181405/uscybergames-pbchocolate-writeups/blob/main/uscybergames/beginner-room/misc/Container%20Chronicles.md)
+
+
+
+
 
