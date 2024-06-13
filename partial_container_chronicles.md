@@ -27,8 +27,32 @@ I used aperisolve.com to find part of the flag that was hidden in the RGB red ch
 SIVBGR{MM_DD_YYYY_d0ck3r}
 MANUFACTUREDATE
 
-I found a writeup on github by pbchocolate on github:
+I read the clue and tried the manufacture date of Docker, but that did not work.  I was very happy to find a writeup by pbchocolate on github:
 [pbchocolate writeup for Container Chronicles](https://github.com/sa1181405/uscybergames-pbchocolate-writeups/blob/main/uscybergames/beginner-room/misc/Container%20Chronicles.md)
+
+In this writeup, I did not understand the sentence:
+
+"Reversing the image, we get this site:
+http://intermodalnetwork.blogspot.com/2011/12/nyk-line-container-nyku-257454-2-high.html"
+
+But it gave me the idea to use Google Image Search to find more information about the shipping container.
+
+```
+https://lens.google.com/search?ep=gisbubb&hl=en&re=df&p=AbrfA8oJTZukxw0ISex31lZ-ni77qW4zDxGKF_O1hSOsst5WtgPQSTZNMJYB0dSeMacx3iNX1vsaMP56ALmXCvlZssJIIXqNuFuW77AnMe4p9QezfdIYa8xWXis3zbqXJ2ZWwf_tlXICgDpPfALut2k8MTNkEp5qB4WjiGxMYswcQLHoTO8dtnjDLr_n247lxYPMc6BbSIj-fs7H3A%3D%3D#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLDEsIkVrY0tKREUwWTJVMk5UazRMVEV3TnpNdE5HWXpaUzFoTkRsbExUZzRPV0kzWlRObE4yUmpNaElmU1RGSGJHOVVUbkJIVkZGaWMwNXBYM3AxVm1GWlRWaGliVlozT1VGU2F3PT0iLG51bGwsbnVsbCxbW251bGwsbnVsbCwiaXAtMCJdLFsiZDkwZTI2YzgtNmM2Yi00N2FhLWEyYTUtYzVjYjY3NGQyMmUyIl1dLG51bGwsbnVsbCxudWxsLFtudWxsLG51bGwsW251bGwsWzAsMCwxMDAwMDAsMTAwMDAwXV1dLFsiZDkwZTI2YzgtNmM2Yi00N2FhLWEyYTUtYzVjYjY3NGQyMmUyIl1d
+```
+
+The first entry of the Google result set was the same link as in the writeup: 
+
+```
+http://intermodalnetwork.blogspot.com/2011/12/nyk-line-container-nyku-257454-2-high.html
+```
+
+I googled "40' high-cube Seacube" and entered "DRYU9290583" to find the manufacture date. 
+
+### SIVBGR{02_10_2011_d0ck3r}
+
+
+
 
 
 
