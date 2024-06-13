@@ -47,7 +47,9 @@ The first entry of the Google result set was the same link as in the writeup:
 http://intermodalnetwork.blogspot.com/2011/12/nyk-line-container-nyku-257454-2-high.html
 ```
 
-I googled "40' high-cube Seacube" and entered "DRYU9290583" to find the manufacture date. 
+I googled "40' high-cube Seacube" and entered "DRYU9290583" to find the manufacture date.
+
+![Shows manufacture date](containChronicles.png)
 
 ### SIVBGR{02_10_2011_d0ck3r}
 
