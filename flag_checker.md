@@ -6,7 +6,7 @@ We found this cryptic Python script that validates the user's flag, but we're ha
 
 ## Solution:
 
-I had two conversations to test whether Microsoft Copilot (public version) could reverse engineer this code.  It generated two different python scripts that both found the flag.  I contacted the leaders of US Cybergames to ask whether this was considered cheating.  They said that using AI was allowed and asked to see this writeup.
+I had conversations to test whether Microsoft Copilot (public version) and Google Gemini (public version) could reverse engineer this code.  Copilot generated two different python scripts that both found the flag.  Gemini coded one script that almost found the flag.  I contacted the leaders of US Cybergames to ask whether this was considered cheating.  They told me that using AI was allowed, then they asked to see this writeup.
 
 ### Me:
 I literally dumped this block of jumbled code into Copilot:
