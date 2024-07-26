@@ -16,21 +16,32 @@ reverse engineer this code phoneSteak = [55, 33, 52, 40, 35, 56, 86, 90, 66, 111
 To reverse engineer this code, we need to understand what it’s doing and then work backwards to find the input that will produce the phoneSteak list when processed by the code.
 
 Here’s a step-by-step breakdown of the code:
+
     1. libraryDiscussion takes an input string (the flag).
+
     2. confusedSheep is a list of the ASCII values of the characters in the input string.
+    
     3. makeupRoof is created by subtracting 27 from each ASCII value in confusedSheep.
+    
     4. tinRoyalty is created by XOR-ing each value in makeupRoof with 15.
+    
     5. The code then swaps elements at certain indices in tinRoyalty:
         ◦ seaTent with injectPush
         ◦ outfitStrike with foxEmbox
         ◦ callCover with brushCopy
+    
     6. Finally, it reverses the second half of the tinRoyalty list and checks if it matches phoneSteak.
 
 To find the original input, we need to reverse these operations:
+    
     1. Reverse the second half of the phoneSteak list.
+    
     2. Swap the elements back to their original positions.
+    
     3. XOR each number with 15.
+    
     4. Add 27 to each number to get the ASCII values.
+    
     5. Convert the ASCII values back to characters to get the original string.
 
 Let’s write the reverse code:
