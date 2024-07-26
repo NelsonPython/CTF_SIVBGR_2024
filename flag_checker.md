@@ -111,9 +111,17 @@ The original flag is : SIVBGR{pyth0n_r3v3rs1ng_pr0}
                                                                                              
 ```
 
-## Experiments Using Google Gemini
+## Experimenting with Google Gemini
 
-I dumped the same block of code into Gemini and Gemini responded with the following:
+### Me:
+I dumped the same block of jumbled code into Gemini:
+
+```
+reverse engineer this code phoneSteak = [55, 33, 52, 40, 35, 56, 86, 90, 66, 111, 81, 26, 23, 75, 109, 26, 88, 90, 75, 67, 92, 25, 87, 88, 92, 84, 23, 88] libraryDiscussion = input("Enter the flag: ") confusedSheep = [ord(herdSlot) for herdSlot in libraryDiscussion] mintFarm = len(confusedSheep) trustBreed = len(phoneSteak) seaTent = 6 callCover = 17 foxEmbox = (248 // trustBreed) % trustBreed outfitStrike = 10 brushCopy = (341 // trustBreed) % 17 injectPush = (1240 + 28 // trustBreed) % trustBreed makeupRoof = [] tinRoyalty = [] if trustBreed == mintFarm: for heartCool in confusedSheep: makeupRoof.append(heartCool - 27) for angelStay in makeupRoof: tinRoyalty.append(angelStay ^ 15) franchisePath = tinRoyalty[seaTent] tinRoyalty[seaTent] = tinRoyalty[injectPush] tinRoyalty[injectPush] = franchisePath eastGhostwriter = tinRoyalty[outfitStrike] tinRoyalty[outfitStrike] = tinRoyalty[foxEmbox] tinRoyalty[foxEmbox] = eastGhostwriter personPioneer = tinRoyalty[callCover] tinRoyalty[callCover] = tinRoyalty[brushCopy] tinRoyalty[brushCopy] = personPioneer lineMoon = tinRoyalty[0 : len(tinRoyalty) // 2] puddingCommission = tinRoyalty[len(tinRoyalty) // 2 : len(tinRoyalty)] furRegret = lineMoon + puddingCommission[::-1] tinRoyalty = furRegret if tinRoyalty == phoneSteak: print("Correct!! :)") else: print("Incorrect flag :(") else: print("Incorrect :(")
+```
+Gemini responsed in several increments writing code snippets with spaces for more code.  Then, it asked if I wanted to continue.  This approach reminds me of a professor teaching a student.  But the response was very long with lots of redundant code so I copied the explanation and the final Python script.
+
+### Gemini:
 
 ### Understanding the Code: A Breakdown
 
@@ -123,27 +131,20 @@ The code is designed to verify a user-inputted flag against a predefined set of 
 
 #### Code Initialization:
 
-phoneSteak is a list of numbers that represents the correct, encoded flag.
-
-libraryDiscussion is where the user input (flag) is stored.
-
-confusedSheep converts the input flag into a list of ASCII values.
-
-Several variables are calculated based on the lengths of phoneSteak and confusedSheep.
+- phoneSteak is a list of numbers that represents the correct, encoded flag.
+- libraryDiscussion is where the user input (flag) is stored.
+- confusedSheep converts the input flag into a list of ASCII values.
+- several variables are calculated based on the lengths of phoneSteak and confusedSheep.
 
 #### Flag Processing:
 
 Checks if the lengths of the input and the correct flag match.  If they match:
 
-makeupRoof subtracts 27 from each element in confusedSheep.
-
-tinRoyalty performs a XOR operation with 15 on each element in makeupRoof.
-
-Several elements in tinRoyalty are swapped around using indices calculated earlier.
-
-tinRoyalty is split in half and reversed, creating furRegret.
-
-If furRegret matches phoneSteak, the flag is correct.
+- makeupRoof subtracts 27 from each element in confusedSheep.
+- tinRoyalty performs a XOR operation with 15 on each element in makeupRoof.
+- Several elements in tinRoyalty are swapped around using indices calculated earlier.
+- tinRoyalty is split in half and reversed, creating furRegret.
+- If furRegret matches phoneSteak, the flag is correct.
 
 #### Decoding the Flag
 
@@ -175,11 +176,11 @@ Convert each number to its corresponding ASCII character.
 - Error handling could be added to handle cases where the input flag is not the correct length.
 
 Would you like to attempt to reverse engineer the flag based on this information?  I can provide more detailed explanations or hints if needed.
-```
+
+### Me:
 
 yes
 
-```
 ### Let's Reverse Engineer the Flag
 
 1. Reverse the final transformation:
@@ -201,9 +202,8 @@ Add 27 to each element of tinRoyalty to reverse the offset.
 5. Convert to characters:
 
 Convert the resulting numbers to their corresponding ASCII characters to obtain the flag.
-```
 
-Recap the swaps:
+6. Recap the swaps:
 
 ```
 franchisePath = tinRoyalty[seaTent]
@@ -219,7 +219,7 @@ tinRoyalty[brushCopy] = personPioneer
 
 Essentially, these lines swap elements at specific indices within the tinRoyalty list. To reverse this, we need to perform the same swaps in reverse order.
 
-Python
+### Final Python script
 
 ```
 def reverse_engineer(phoneSteak):
@@ -264,7 +264,8 @@ flag = reverse_engineer(phoneSteak)
 print(flag)
 ```
 
-Output:
+### Output:
 
 FLAG{REVERSE_ENGINEERING_IS_FUN}
-```
+
+
