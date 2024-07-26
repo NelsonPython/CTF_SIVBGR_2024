@@ -123,9 +123,7 @@ Gemini responsed in several increments writing code snippets with spaces for mor
 
 ### Gemini:
 
-### Understanding the Code: A Breakdown
-
-#### Purpose
+#### Understanding the Code: A Breakdown
 
 The code is designed to verify a user-inputted flag against a predefined set of numbers. If the flag is correct after undergoing a series of transformations, it prints "Correct!!".  Otherwise, it prints an error message.
 
