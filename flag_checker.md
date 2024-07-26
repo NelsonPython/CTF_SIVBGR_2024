@@ -9,7 +9,11 @@ We found this cryptic Python script that validates the user's flag, but we're ha
 I had two conversations to test whether Microsoft Copilot (public version) could reverse engineer this code.  It generated two different python scripts that both found the flag.  I contacted the leaders of US Cybergames to ask whether this was considered cheating.  They said that using AI was allowed and asked to see this writeup.
 
 ### Me:
+I literally dumped this block of jumbled code into Copilot:
+
+```
 reverse engineer this code phoneSteak = [55, 33, 52, 40, 35, 56, 86, 90, 66, 111, 81, 26, 23, 75, 109, 26, 88, 90, 75, 67, 92, 25, 87, 88, 92, 84, 23, 88] libraryDiscussion = input("Enter the flag: ") confusedSheep = [ord(herdSlot) for herdSlot in libraryDiscussion] mintFarm = len(confusedSheep) trustBreed = len(phoneSteak) seaTent = 6 callCover = 17 foxEmbox = (248 // trustBreed) % trustBreed outfitStrike = 10 brushCopy = (341 // trustBreed) % 17 injectPush = (1240 + 28 // trustBreed) % trustBreed makeupRoof = [] tinRoyalty = [] if trustBreed == mintFarm: for heartCool in confusedSheep: makeupRoof.append(heartCool - 27) for angelStay in makeupRoof: tinRoyalty.append(angelStay ^ 15) franchisePath = tinRoyalty[seaTent] tinRoyalty[seaTent] = tinRoyalty[injectPush] tinRoyalty[injectPush] = franchisePath eastGhostwriter = tinRoyalty[outfitStrike] tinRoyalty[outfitStrike] = tinRoyalty[foxEmbox] tinRoyalty[foxEmbox] = eastGhostwriter personPioneer = tinRoyalty[callCover] tinRoyalty[callCover] = tinRoyalty[brushCopy] tinRoyalty[brushCopy] = personPioneer lineMoon = tinRoyalty[0 : len(tinRoyalty) // 2] puddingCommission = tinRoyalty[len(tinRoyalty) // 2 : len(tinRoyalty)] furRegret = lineMoon + puddingCommission[::-1] tinRoyalty = furRegret if tinRoyalty == phoneSteak: print("Correct!! :)") else: print("Incorrect flag :(") else: print("Incorrect :(")
+```
 
 ### Copilot:
 
@@ -109,14 +113,15 @@ The original flag is : SIVBGR{pyth0n_r3v3rs1ng_pr0}
 
 ## Experiments Using Google Gemini
 
-```
-Understanding the Code: A Breakdown
+I dumped the same block of code into Gemini and Gemini responded with the following:
 
-Purpose
+### Understanding the Code: A Breakdown
+
+#### Purpose
 
 The code is designed to verify a user-inputted flag against a predefined set of numbers. If the flag is correct after undergoing a series of transformations, it prints "Correct!!".  Otherwise, it prints an error message.
 
-Code Initialization:
+#### Code Initialization:
 
 phoneSteak is a list of numbers that represents the correct, encoded flag.
 
@@ -126,11 +131,9 @@ confusedSheep converts the input flag into a list of ASCII values.
 
 Several variables are calculated based on the lengths of phoneSteak and confusedSheep.
 
-Flag Processing:
+#### Flag Processing:
 
-Checks if the lengths of the input and the correct flag match.
-
-If they match:
+Checks if the lengths of the input and the correct flag match.  If they match:
 
 makeupRoof subtracts 27 from each element in confusedSheep.
 
@@ -142,105 +145,65 @@ tinRoyalty is split in half and reversed, creating furRegret.
 
 If furRegret matches phoneSteak, the flag is correct.
 
-Decoding the Flag
+#### Decoding the Flag
 
 To find the correct flag, we need to reverse the process:
 
-Reverse the transformations applied to tinRoyalty:
+##### Reverse the transformations applied to tinRoyalty:
 
 Undo the splitting and reversing to get back to the original tinRoyalty.
 
-Undo the swaps using the same indices.
+##### Undo the swaps using the same indices.
 
 Undo the XOR operation with 15.
 
 Add 27 to each element.
 
-Convert the resulting numbers back to characters:
+##### Convert the resulting numbers back to characters:
 
 Convert each number to its corresponding ASCII character.
 
-Potential Challenges
+### Potential Challenges
 
-The specific values used in calculations (e.g., 27, 15, indices) might have specific meanings or patterns that could aid in analysis.
+- The specific values used in calculations (e.g., 27, 15, indices) might have specific meanings or patterns that could aid in analysis.
+- The XOR operation can be tricky to reverse without additional information.
+- The code uses obscure variable names which might hinder understanding.
 
-The XOR operation can be tricky to reverse without additional information.
+### Additional Considerations
 
-The code uses obscure variable names which might hinder understanding.
+- The code could be optimized or made more readable by using more descriptive variable names and potentially combining some steps.
+- Error handling could be added to handle cases where the input flag is not the correct length.
 
-Additional Considerations
-
-The code could be optimized or made more readable by using more descriptive variable names and potentially combining some steps.
-
-Error handling could be added to handle cases where the input flag is not the correct length.
-
-Would you like to attempt to reverse engineer the flag based on this information?
-
-I can provide more detailed explanations or hints if needed.
+Would you like to attempt to reverse engineer the flag based on this information?  I can provide more detailed explanations or hints if needed.
 ```
 
 yes
 
 ```
-Let's Reverse Engineer the Flag
+### Let's Reverse Engineer the Flag
 
-Understanding the Code's Logic
-
-Based on the code breakdown provided, we can outline the steps to reverse engineer the flag:
-
-Reverse the final transformation:
+1. Reverse the final transformation:
 
 Undo the splitting and reversing of tinRoyalty to get back to its original state.
 
-Undo the swaps:
+2. Undo the swaps:
 
 Reverse the swaps performed on tinRoyalty using the indices seaTent, injectPush, outfitStrike, foxEmbox, callCover, and brushCopy.
 
-Undo the XOR operation:
+3. Undo the XOR operation:
 
 Perform a XOR operation with 15 on each element of tinRoyalty to reverse the encryption.
 
-Undo the subtraction:
+4. Undo the subtraction:
 
 Add 27 to each element of tinRoyalty to reverse the offset.
 
-Convert to characters:
+5. Convert to characters:
 
 Convert the resulting numbers to their corresponding ASCII characters to obtain the flag.
 ```
 
-Python
-
-```
-def reverse_engineer(phoneSteak):
-
-  # Reverse the final transformation
-  tinRoyalty = phoneSteak[:len(phoneSteak) // 2] + phoneSteak[len(phoneSteak) // 2:][::-1]
-
-  # Undo the swaps (replace with actual indices from the code)
-  # ...
-
-  # Undo the XOR operation
-  tinRoyalty = [x ^ 15 for x in tinRoyalty]
-
-  # Undo the subtraction
-  tinRoyalty = [x + 27 for x in tinRoyalty]
-
-  # Convert to characters
-  flag = ''.join(chr(x) for x in tinRoyalty)
-  return flag
-
-# Replace with the actual phoneSteak values
-phoneSteak = [55, 33, 52, 40, 35, 56, 86, 90, 66, 111, 81, 26, 23, 75, 109, 26, 88, 90, 75, 67, 92, 25, 87, 88, 92, 84, 23, 88]
-
-flag = reverse_engineer(phoneSteak)
-print(flag)
-```
-
-Let's Undo Those Swaps
-
-Understanding the Swaps
-Before we dive into the code, let's recap the swaps:
+Recap the swaps:
 
 ```
 franchisePath = tinRoyalty[seaTent]
@@ -259,56 +222,6 @@ Essentially, these lines swap elements at specific indices within the tinRoyalty
 Python
 
 ```
-def reverse_engineer(phoneSteak):
-  # Reverse the final transformation
-  tinRoyalty = phoneSteak[:len(phoneSteak) // 2] + phoneSteak[len(phoneSteak) // 2:][::-1]
-
-  # Undo the swaps
-  seaTent = 6
-  injectPush = 10
-  outfitStrike = 10
-  foxEmbox = 12
-  callCover = 17
-  brushCopy = 17
-
-  # Reverse the swaps
-  personPioneer = tinRoyalty[brushCopy]
-  tinRoyalty[brushCopy] = tinRoyalty[callCover]
-  tinRoyalty[callCover] = personPioneer
-
-  eastGhostwriter = tinRoyalty[foxEmbox]
-  tinRoyalty[foxEmbox] = tinRoyalty[outfitStrike]
-  tinRoyalty[outfitStrike] = eastGhostwriter
-
-  franchisePath = tinRoyalty[injectPush]
-  tinRoyalty[injectPush] = tinRoyalty[seaTent]
-  tinRoyalty[seaTent] = franchisePath
-
-  # Undo the XOR operation
-  tinRoyalty = [x ^ 15 for x in tinRoyalty]
-
-  # Undo the subtraction
-  tinRoyalty = [x + 27 for x in tinRoyalty]
-
-  # Convert to characters
-  flag = ''.join(chr(x) for x in tinRoyalty)
-  return flag
-
-# Replace with the actual phoneSteak values
-phoneSteak = [55, 33, 52, 40, 35, 56, 86, 90, 66, 111, 81, 26, 23, 75, 109, 26, 88, 90, 75, 67, 92, 25, 87, 88, 92, 84, 23, 88]
-
-flag = reverse_engineer(phoneSteak)
-print(flag)
-```
-Note: Remember to replace the placeholder values for seaTent, injectPush, outfitStrike, foxEmbox, callCover, and brushCopy with the actual values from the original code.
-
-By running this code, you should now be able to obtain the correct flag.
-
-Would you like to run this code and see the result?
-yes
-
-```
-Python
 def reverse_engineer(phoneSteak):
   # Reverse the final transformation
   tinRoyalty = phoneSteak[:len(phoneSteak) // 2] + phoneSteak[len(phoneSteak) // 2:][::-1]
