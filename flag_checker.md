@@ -81,7 +81,7 @@ print(f"The original flag is: {originalFlag}")
 ```
 ```                                                                                             
 └─$ python3 copilot.py  
-The flag is : SIVBGR{pyth0n_r3v3rs1ng_pr0}
+The flag is: SIVBGR{pyth0n_r3v3rs1ng_pr0}
 ```
 
 copilot_2.py:
@@ -265,7 +265,18 @@ print(flag)
 ```
 
 ### Output:
+Gemini ran the code online and output the following flag:
 
 FLAG{REVERSE_ENGINEERING_IS_FUN}
+
+This appears to be a hallucination that does not match the original flag or the flag output from the Python script that Gemini coded.  When I ran the Gemini code, I got this flag:
+
+The Gemini flag is: SIVBGR3ph{t0y_r3vnrs1ng_pr0}
+
+It is close to the original flag, but Gemini computed a "3ph{t0y" instead of a "{pyth0n" and the "n" after "v" should be a "3".  Otherwise the flag matches the original:
+
+The original flag is : SIVBGR{pyth0n_r3v3rs1ng_pr0}
+
+
 
 
